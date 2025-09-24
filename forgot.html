@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lotto Lux - Forgot Password</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="dynamic-background"></div>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <a href="index.html" class="logo">Lotto Lux</a>
+                <ul class="nav-links">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="games.html"><i class="fas fa-gamepad"></i> Games</a></li>
+                    <li><a href="lottery.html"><i class="fas fa-ticket-alt"></i> Lottery</a></li>
+                    <li><a href="jackpot.html"><i class="fas fa-trophy"></i> Jackpot</a></li>
+                    <li><a href="casino.html"><i class="fas fa-dice"></i> Casino</a></li>
+                    <li><a href="offers.html"><i class="fas fa-gift"></i> Offers & Bonuses</a></li>
+                    <li class="auth-links">
+                        <a href="login.html" class="btn btn-primary"><i class="fas fa-sign-in-alt"></i> Login</a>
+                        <a href="signup.html" class="btn btn-secondary"><i class="fas fa-user-plus"></i> Signup</a>
+                    </li>
+                    <li class="user-menu" style="display: none;">
+                        <a href="#" id="profile-dropdown-btn"><i class="fas fa-user-circle"></i> Profile <i class="fas fa-caret-down"></i></a>
+                        <div class="dropdown-content">
+                            <a href="me.html"><i class="fas fa-user"></i> My Profile</a>
+                            <a href="deposit.html"><i class="fas fa-money-bill-wave"></i> Deposit</a>
+                            <a href="withdraw.html"><i class="fas fa-wallet"></i> Withdraw</a>
+                            <a href="admin.html" id="admin-link" style="display: none;"><i class="fas fa-user-shield"></i> Admin Dashboard</a>
+                            <a href="#" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                        </div>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="auth-main">
+        <section class="forgot-password-section">
+            <div class="container auth-container">
+                <h2>Forgot Your Password?</h2>
+                <p>Enter your email address and we'll send you a link to reset your password.</p>
+                <form id="forgot-password-form" class="auth-form">
+                    <div class="form-group">
+                        <label for="reset-email">Email Address</label>
+                        <input type="email" id="reset-email" name="email" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary full-width-btn">Send Reset Link</button>
+                    <p class="auth-switch">Remember your password? <a href="login.html">Log In</a></p>
+                </form>
+                <div id="forgot-password-message" class="message-area" style="display: none;"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Lotto Lux. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
