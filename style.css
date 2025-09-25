@@ -1,0 +1,195 @@
+/* --- Admin Dashboard Specific Styles --- */
+
+.admin-hero-section, .profile-hero-section {
+    background: linear-gradient(rgba(26, 26, 46, 0.8), rgba(26, 26, 46, 0.9)), url('https://placehold.co/1920x400/1a1a2e/ffffff/png?text=Admin+Profile+Background') no-repeat center center/cover;
+    min-height: 40vh;
+    display: flex;
+    flex-direction: column; /* For profile avatar */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+    position: relative;
+    margin-top: -85px;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.admin-hero-section h1, .profile-hero-section h1 {
+    font-size: 4em;
+    margin-bottom: 15px;
+    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 15px rgba(0, 230, 118, 0.6);
+}
+
+.admin-hero-section p, .profile-hero-section p {
+    font-size: 1.3em;
+    color: var(--text-color);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.admin-dashboard-section, .profile-dashboard-section {
+    background-color: rgba(33, 33, 62, 0.8);
+    margin: 40px auto;
+    padding: 60px 40px;
+    border-radius: 15px;
+    box-shadow: var(--card-shadow);
+    border: 1px solid var(--border-color);
+}
+
+.dashboard-overview, .dashboard-summary, .admin-sections, .profile-sections {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.overview-card, .summary-card, .admin-card, .profile-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures buttons are at bottom */
+}
+
+.overview-card:hover, .summary-card:hover, .admin-card:hover, .profile-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 230, 118, 0.2);
+}
+
+.overview-card i, .summary-card i {
+    font-size: 3em;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+}
+
+.overview-card h3, .summary-card h3, .admin-card h3, .profile-card h3 {
+    font-size: 1.6em;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.overview-card p, .summary-card p {
+    font-size: 1.1em;
+    color: var(--text-color);
+    margin-bottom: 20px;
+    flex-grow: 1; /* Makes sure content pushes buttons down */
+}
+
+.overview-card .btn, .summary-card .btn {
+    margin-top: auto; /* Pushes button to the bottom */
+}
+
+/* Specifics for Profile Balance Card */
+.balance-card .balance-amount {
+    font-size: 2.5em;
+    color: var(--text-color-light);
+    font-weight: bold;
+    margin-bottom: 25px;
+    background: linear-gradient(45deg, #00e676, #69f0ae); /* Green gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.admin-card h3, .profile-card h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.admin-card h3 i, .profile-card h3 i {
+    font-size: 1.2em;
+    margin-right: 10px;
+    color: var(--accent-color);
+}
+
+.admin-card ul, .profile-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.admin-card ul li, .profile-card ul li {
+    margin-bottom: 15px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+
+.admin-card ul li:last-child, .profile-card ul li:last-child {
+    margin-bottom: 0;
+}
+
+.admin-card ul li a, .profile-card ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.admin-card ul li a:hover, .profile-card ul li a:hover {
+    color: var(--primary-color);
+}
+
+.admin-card ul li a i, .profile-card ul li a i {
+    margin-right: 10px;
+    color: var(--secondary-color);
+    font-size: 1em;
+}
+
+/* Profile Avatar */
+.profile-avatar {
+    font-size: 8em; /* Large icon for avatar */
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    text-shadow: 0 0 20px rgba(0, 230, 118, 0.4);
+}
+
+.activity-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.activity-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(var(--text-color-rgb), 0.1);
+}
+
+.activity-list li:last-child {
+    border-bottom: none;
+}
+
+.activity-list li span {
+    color: var(--text-color);
+}
+
+.activity-list li .activity-date {
+    font-size: 0.9em;
+    color: var(--text-color-light);
+}
+
+/* Responsive Adjustments for Admin/Profile */
+@media (max-width: 768px) {
+    .dashboard-overview, .dashboard-summary, .admin-sections, .profile-sections {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-hero-section h1, .profile-hero-section h1 {
+        font-size: 2.8em;
+    }
+}
