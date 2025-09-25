@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lotto Lux - Offers & Bonuses</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="dynamic-background"></div>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <a href="index.html" class="logo">Lotto Lux</a>
+                <ul class="nav-links">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="games.html"><i class="fas fa-gamepad"></i> Games</a></li>
+                    <li><a href="lottery.html"><i class="fas fa-ticket-alt"></i> Lottery</a></li>
+                    <li><a href="jackpot.html"><i class="fas fa-trophy"></i> Jackpot</a></li>
+                    <li><a href="casino.html"><i class="fas fa-dice"></i> Casino</a></li>
+                    <li><a href="offers.html"><i class="fas fa-gift"></i> Offers & Bonuses</a></li>
+                    <li class="auth-links">
+                        <a href="login.html" class="btn btn-primary"><i class="fas fa-sign-in-alt"></i> Login</a>
+                        <a href="signup.html" class="btn btn-secondary"><i class="fas fa-user-plus"></i> Signup</a>
+                    </li>
+                    <li class="user-menu" style="display: none;">
+                        <a href="#" id="profile-dropdown-btn"><i class="fas fa-user-circle"></i> Profile <i class="fas fa-caret-down"></i></a>
+                        <div class="dropdown-content">
+                            <a href="me.html"><i class="fas fa-user"></i> My Profile</a>
+                            <a href="deposit.html"><i class="fas fa-money-bill-wave"></i> Deposit</a>
+                            <a href="withdraw.html"><i class="fas fa-wallet"></i> Withdraw</a>
+                            <a href="admin.html" id="admin-link" style="display: none;"><i class="fas fa-user-shield"></i> Admin Dashboard</a>
+                            <a href="#" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                        </div>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="offers-hero-section">
+            <div class="container">
+                <h1>Unleash the Power of Bonuses!</h1>
+                <p>Claim exciting offers and boost your chances to win big!</p>
+            </div>
+        </section>
+
+        <section class="current-offers-section container">
+            <h2>Current Promotions</h2>
+            <div class="offers-grid">
+                <div class="offer-card" style="background-color: #00e676;">
+                    <div class="offer-icon"><i class="fas fa-percent"></i></div>
+                    <h3>100% Welcome Bonus</h3>
+                    <p>Double your first deposit up to $500! New players only.</p>
+                    <p class="terms">Min. deposit $20. Wagering req. apply.</p>
+                    <button class="btn btn-activate">Activate Now</button>
+                </div>
+                <div class="offer-card" style="background-color: #ff4081;">
+                    <div class="offer-icon"><i class="fas fa-gift"></i></div>
+                    <h3>50 Free Spins</h3>
+                    <p>On our 'Slot Mania' game! No deposit required.</p>
+                    <p class="terms">Valid for 7 days. Max win $100.</p>
+                    <button class="btn btn-activate">Activate Now</button>
+                </div>
+                <div class="offer-card" style="background-color: #00b0ff;">
+                    <div class="offer-icon"><i class="fas fa-piggy-bank"></i></div>
+                    <h3>Weekend Reload Bonus</h3>
+                    <p>Get 50% bonus on deposits every weekend!</p>
+                    <p class="terms">Up to $200. Every Friday-Sunday.</p>
+                    <button class="btn btn-activate">Activate Now</button>
+                </div>
+                <div class="offer-card" style="background-color: #ffc107;">
+                    <div class="offer-icon"><i class="fas fa-star"></i></div>
+                    <h3>Loyalty Points Boost</h3>
+                    <p>Earn double loyalty points on all games this week!</p>
+                    <p class="terms">Ends Sunday. Exclusive for VIPs.</p>
+                    <button class="btn btn-activate">Learn More</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="how-bonuses-work-section container">
+            <h2>How Bonuses Work</h2>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header">What is a wagering requirement?</button>
+                    <div class="accordion-content">
+                        <p>A wagering requirement is the number of times you need to play through a bonus amount before you can withdraw any winnings. For example, if you have a $10 bonus with a 20x wagering requirement, you need to bet $200 before withdrawing.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">How do I activate a bonus?</button>
+                    <div class="accordion-content">
+                        <p>Most bonuses can be activated by clicking the "Activate Now" button, or by making a qualifying deposit. Some may require a bonus code which you enter during the deposit process.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">Can I withdraw bonus money immediately?</button>
+                    <div class="accordion-content">
+                        <p>No, bonus money usually cannot be withdrawn immediately. It must first meet the specified wagering requirements. Once the requirements are met, the bonus funds and any associated winnings typically convert to real money which can then be withdrawn.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Lotto Lux. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script type="module" src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Offer activation handler
+            const activateButtons = document.querySelectorAll('.btn-activate');
+            activateButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    alert('Offer activated! (This is a placeholder action)');
+                    // In a real application, this would trigger backend logic to apply the bonus
+                    button.textContent = 'Activated!';
+                    button.disabled = true;
+                    button.style.backgroundColor = 'var(--text-color-light)';
+                    button.style.cursor = 'not-allowed';
+                });
+            });
+
+            // Accordion functionality for "How Bonuses Work"
+            const accordionHeaders = document.querySelectorAll('.accordion-header');
+            accordionHeaders.forEach(header => {
+                header.addEventListener('click', () => {
+                    const item = header.parentElement;
+                    item.classList.toggle('active'); // Toggle 'active' class on the item
+                    const content = header.nextElementSibling;
+                    if (item.classList.contains('active')) {
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                    } else {
+                        content.style.maxHeight = null;
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
