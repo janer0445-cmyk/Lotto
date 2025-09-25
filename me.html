@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lotto Lux - My Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="dynamic-background"></div>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <a href="index.html" class="logo">Lotto Lux</a>
+                <ul class="nav-links">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="games.html"><i class="fas fa-gamepad"></i> Games</a></li>
+                    <li><a href="lottery.html"><i class="fas fa-ticket-alt"></i> Lottery</a></li>
+                    <li><a href="jackpot.html"><i class="fas fa-trophy"></i> Jackpot</a></li>
+                    <li><a href="casino.html"><i class="fas fa-dice"></i> Casino</a></li>
+                    <li><a href="offers.html"><i class="fas fa-gift"></i> Offers & Bonuses</a></li>
+                    <li class="auth-links" style="display: none;"> <!-- Hidden by default, shown if logged out -->
+                        <a href="login.html" class="btn btn-primary"><i class="fas fa-sign-in-alt"></i> Login</a>
+                        <a href="signup.html" class="btn btn-secondary"><i class="fas fa-user-plus"></i> Signup</a>
+                    </li>
+                    <li class="user-menu"> <!-- Shown by default, hidden if logged out by script -->
+                        <a href="#" id="profile-dropdown-btn"><i class="fas fa-user-circle"></i> Profile <i class="fas fa-caret-down"></i></a>
+                        <div class="dropdown-content">
+                            <a href="me.html"><i class="fas fa-user"></i> My Profile</a>
+                            <a href="deposit.html"><i class="fas fa-money-bill-wave"></i> Deposit</a>
+                            <a href="withdraw.html"><i class="fas fa-wallet"></i> Withdraw</a>
+                            <a href="admin.html" id="admin-link"><i class="fas fa-user-shield"></i> Admin Dashboard</a> <!-- Display controlled by script.js -->
+                            <a href="#" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                        </div>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="profile-hero-section">
+            <div class="container">
+                <div class="profile-avatar">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <h1>Welcome, [Username]!</h1>
+                <p>Manage your account and view your activity.</p>
+            </div>
+        </section>
+
+        <section class="profile-dashboard-section container">
+            <div class="dashboard-summary">
+                <div class="summary-card balance-card">
+                    <i class="fas fa-wallet"></i>
+                    <h3>Current Balance</h3>
+                    <p class="balance-amount">$1,250.75</p>
+                    <a href="deposit.html" class="btn btn-primary">Deposit Funds</a>
+                </div>
+                <div class="summary-card">
+                    <i class="fas fa-trophy"></i>
+                    <h3>Total Winnings</h3>
+                    <p>$5,400.00</p>
+                </div>
+                <div class="summary-card">
+                    <i class="fas fa-ticket-alt"></i>
+                    <h3>Tickets Purchased</h3>
+                    <p>128</p>
+                </div>
+                <div class="summary-card">
+                    <i class="fas fa-gamepad"></i>
+                    <h3>Games Played</h3>
+                    <p>356</p>
+                </div>
+            </div>
+
+            <div class="profile-sections">
+                <div class="profile-card">
+                    <h3><i class="fas fa-user"></i> Personal Information</h3>
+                    <ul>
+                        <li><strong>Email:</strong> user@example.com</li>
+                        <li><strong>Member Since:</strong> Jan 1, 2023</li>
+                        <li><a href="#" class="btn btn-link">Edit Profile</a></li>
+                    </ul>
+                </div>
+
+                <div class="profile-card">
+                    <h3><i class="fas fa-history"></i> Recent Activity</h3>
+                    <ul class="activity-list">
+                        <li><span>Won $500 on PowerBall</span> <span class="activity-date">Nov 20, 2023</span></li>
+                        <li><span>Played Slot Mania</span> <span class="activity-date">Nov 19, 2023</span></li>
+                        <li><span>Deposit $100</span> <span class="activity-date">Nov 18, 2023</span></li>
+                        <li><span>Bought Mega Millions Ticket</span> <span class="activity-date">Nov 17, 2023</span></li>
+                    </ul>
+                    <a href="#" class="btn btn-link">View All Activity</a>
+                </div>
+
+                <div class="profile-card">
+                    <h3><i class="fas fa-cog"></i> Account Settings</h3>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-lock"></i> Change Password</a></li>
+                        <li><a href="#"><i class="fas fa-envelope"></i> Email Preferences</a></li>
+                        <li><a href="#"><i class="fas fa-shield-alt"></i> Two-Factor Authentication</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Lotto Lux. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
