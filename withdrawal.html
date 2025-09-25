@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lotto Lux - Withdraw Funds</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="dynamic-background"></div>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <a href="index.html" class="logo">Lotto Lux</a>
+                <ul class="nav-links">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="games.html"><i class="fas fa-gamepad"></i> Games</a></li>
+                    <li><a href="lottery.html"><i class="fas fa-ticket-alt"></i> Lottery</a></li>
+                    <li><a href="jackpot.html"><i class="fas fa-trophy"></i> Jackpot</a></li>
+                    <li><a href="casino.html"><i class="fas fa-dice"></i> Casino</a></li>
+                    <li><a href="offers.html"><i class="fas fa-gift"></i> Offers & Bonuses</a></li>
+                    <li class="auth-links">
+                        <a href="login.html" class="btn btn-primary"><i class="fas fa-sign-in-alt"></i> Login</a>
+                        <a href="signup.html" class="btn btn-secondary"><i class="fas fa-user-plus"></i> Signup</a>
+                    </li>
+                    <li class="user-menu" style="display: none;">
+                        <a href="#" id="profile-dropdown-btn"><i class="fas fa-user-circle"></i> Profile <i class="fas fa-caret-down"></i></a>
+                        <div class="dropdown-content">
+                            <a href="me.html"><i class="fas fa-user"></i> My Profile</a>
+                            <a href="deposit.html"><i class="fas fa-money-bill-wave"></i> Deposit</a>
+                            <a href="withdraw.html"><i class="fas fa-wallet"></i> Withdraw</a>
+                            <a href="admin.html" id="admin-link" style="display: none;"><i class="fas fa-user-shield"></i> Admin Dashboard</a>
+                            <a href="#" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                        </div>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="withdraw-hero-section">
+            <div class="container">
+                <h1>Securely Withdraw Your Winnings</h1>
+                <p>Enjoy your earnings with our fast and reliable withdrawal options.</p>
+            </div>
+        </section>
+
+        <section class="withdraw-section container">
+            <div class="withdraw-summary">
+                <h2>Your Current Balance: <span id="current-balance-withdraw">$0.00</span></h2>
+                <p>Minimum withdrawal amount: $20.00</p>
+            </div>
+
+            <div class="withdraw-methods-grid">
+                <div class="method-card active" data-method="bank-transfer">
+                    <i class="fas fa-bank"></i>
+                    <h3>Bank Transfer</h3>
+                    <p>Direct transfer to your bank</p>
+                </div>
+                <div class="method-card" data-method="crypto">
+                    <i class="fab fa-bitcoin"></i>
+                    <h3>Cryptocurrency</h3>
+                    <p>Bitcoin, Ethereum, Litecoin</p>
+                </div>
+                <div class="method-card" data-method="e-wallet">
+                    <i class="fas fa-wallet"></i>
+                    <h3>E-Wallet</h3>
+                    <p>PayPal, Skrill, Neteller</p>
+                </div>
+            </div>
+
+            <div class="withdraw-form-container">
+                <h2>Withdrawal Details</h2>
+                <form id="withdraw-form">
+                    <div class="form-group">
+                        <label for="withdraw-amount">Amount to Withdraw ($)</label>
+                        <input type="number" id="withdraw-amount" placeholder="e.g., 50.00" min="20" step="0.01" required>
+                    </div>
+
+                    <div id="bank-transfer-details" class="payment-details active">
+                        <div class="form-group">
+                            <label for="recipient-bank">Recipient Bank Name</label>
+                            <input type="text" id="recipient-bank" placeholder="e.g., Bank of America" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="recipient-account">Account Number</label>
+                            <input type="text" id="recipient-account" placeholder="e.g., 0123456789" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="recipient-swift">SWIFT/BIC Code</label>
+                            <input type="text" id="recipient-swift" placeholder="e.g., BOFAUS3N" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="recipient-name">Account Holder Name</label>
+                            <input type="text" id="recipient-name" placeholder="Your Name" required>
+                        </div>
+                    </div>
+
+                    <div id="crypto-details" class="payment-details">
+                        <div class="form-group">
+                            <label for="crypto-type">Cryptocurrency</label>
+                            <select id="crypto-type" required>
+                                <option value="">Select Cryptocurrency</option>
+                                <option value="BTC">Bitcoin (BTC)</option>
+                                <option value="ETH">Ethereum (ETH)</option>
+                                <option value="LTC">Litecoin (LTC)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="crypto-address-withdraw">Your Wallet Address</label>
+                            <input type="text" id="crypto-address-withdraw" placeholder="e.g., bc1qxyz..." required>
+                        </div>
+                        <p class="note">Please ensure the address is correct. Crypto withdrawals are irreversible.</p>
+                    </div>
+
+                    <div id="e-wallet-details" class="payment-details">
+                        <div class="form-group">
+                            <label for="e-wallet-type">E-Wallet Service</label>
+                            <select id="e-wallet-type" required>
+                                <option value="">Select E-Wallet</option>
+                                <option value="paypal">PayPal</option>
+                                <option value="skrill">Skrill</option>
+                                <option value="neteller">Neteller</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="e-wallet-email">E-Wallet Email/ID</label>
+                            <input type="email" id="e-wallet-email" placeholder="e.g., your@email.com" required>
+                        </div>
+                        <p class="note">Ensure your E-Wallet account is verified for faster processing.</p>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block">Request Withdrawal</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Lotto Lux. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script type="module" src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const methodCards = document.querySelectorAll('.withdraw-methods-grid .method-card');
+            const paymentDetails = document.querySelectorAll('.withdraw-form-container .payment-details');
+
+            methodCards.forEach(card => {
+                card.addEventListener('click', () => {
+                    methodCards.forEach(mc => mc.classList.remove('active'));
+                    card.classList.add('active');
+
+                    const targetMethod = card.dataset.method;
+                    paymentDetails.forEach(pd => {
+                        pd.classList.remove('active');
+                        if (pd.id === `${targetMethod}-details`) {
+                            pd.classList.add('active');
+                        }
+                    });
+                });
+            });
+
+            // Placeholder for actual balance fetching
+            // In a real app, this would fetch user balance from Firebase/backend
+            // document.getElementById('current-balance-withdraw').textContent = '$123.45';
+
+            document.getElementById('withdraw-form').addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('Withdrawal request submitted! (This is a placeholder action)');
+                // Here you would integrate with your backend for withdrawal processing
+            });
+        });
+    </script>
+</body>
+</html>
